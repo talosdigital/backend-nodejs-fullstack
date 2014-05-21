@@ -1,0 +1,16 @@
+<div ng-include="'partials/application/navbar'"></div>
+<div class="row">
+    <div class="col-sm-4">
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-class="{active: isActive('/user/account/index')}"><a ui-sref="account.welcome">Account Dashboard</a></li>
+            <li ng-class="{active: isActive('/user/account/information')}"><a ui-sref="account.information">Account Information</a></li>
+            <li ng-class="{active: isActive('/user/account/address/view')}"><a ui-sref="account.address.view">Address Book</a></li>
+            <li ng-class="{active: isActive('/user/account/social')}"><a ui-sref="account.social">Merge social networks</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-8">
+        <div class="dashboard-view" ui-view>
+
+        </div>
+    </div>
+</div>

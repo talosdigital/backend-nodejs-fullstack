@@ -1,0 +1,13 @@
+<div ng-include="'partials/application/navbar'"></div>
+
+<div class="jumbotron">
+  <h1>Talos Full-Stack Welcome <span ng-show="currentUser">{{ currentUser.name }}</span>!</h1>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+</div>
+
+<div class="row marketing">
+  <div ng-repeat="thing in awesomeThings">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="header" ng-controller="NavbarCtrl">
+    <ul class="nav nav-pills pull-right">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ui-sref="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li ng-hide="currentUser" ng-class="{active: isActive('/user/auth/login')}"><a ui-sref="login">Login</a></li>
+        <li ng-show="currentUser" ><a ui-sref="account.welcome">Dashboard</a></li>
+        <li ng-hide="currentUser" ng-class="{active: isActive('/user/auth/signup')}"><a ui-sref="signup">Sign up</a></li>
+        <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a ng-href="" ng-click="logout()">Logout</a></li>
+    </ul>
+  <h3 class="text-muted">nodeserver</h3>
+  <a id="menu-toggle" ng-href="" class="sidebar-btn"></a>
+</div>
+<div id="sidebar-wrapper" ng-controller="NavbarCtrl">
+    <ul class="sidebar-nav">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ui-sref="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li ng-hide="currentUser" ng-class="{active: isActive('/user/auth/login')}"><a ui-sref="login">Login</a></li>
+        <li ng-show="currentUser" ><a ui-sref="account.welcome">Dashboard</a></li>
+        <li ng-hide="currentUser" ng-class="{active: isActive('/user/auth/signup')}"><a ui-sref="signup">Sign up</a></li>
+        <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a ui-href="home" ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+</script>
