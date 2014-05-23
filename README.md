@@ -22,4 +22,4 @@
 <h2>Demo</h2>
 <p>This is a demo running with NodeJS <a href="">Click here</a></p>
 <h2>License</h2>
-<a href="">Apache standard</a>
+<a href="http://opensource.org/licenses/OSL-3.0">Open Software License v. 3.0 (OSL-3.0)</a>
