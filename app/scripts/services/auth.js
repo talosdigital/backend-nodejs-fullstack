@@ -62,13 +62,16 @@ angular.module('nodeserverApp')
 
         return User.save(user,
           function(user) {
+              console.log(user);
             $rootScope.currentUser = user;
             return cb(user);
           },
           function(err) {
+              console.log(err);
             return cb(err);
           }).$promise;
       },
+
       /**
        * Change password
        * 

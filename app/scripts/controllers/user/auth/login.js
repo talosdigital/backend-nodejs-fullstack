@@ -47,6 +47,7 @@ angular.module('nodeserverApp')
                     $state.transitionTo("account.welcome");
                 })
                 .catch( function(err) {
+                        console.log(err);
                     err = err.data;
                     $scope.errors.other = err.message;
                 });

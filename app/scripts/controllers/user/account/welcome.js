@@ -2,6 +2,7 @@
 
 angular.module('nodeserverApp')
     .controller('UserAccountWelcomeCtrl', function ($scope, $location,$routeParams,$rootScope, Auth) {
+        console.log($rootScope.currentUser);
         $scope.closeAlert = function(index) {
             $scope.alerts.splice(index, 1);
             $scope.error = null;
