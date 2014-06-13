@@ -1,7 +1,7 @@
 <h2>Address Book</h2>
 <form class="form-inline address-form" name="form" ng-submit="login(form)" novalidate>
 
-    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    <alert ng-repeat="alert in alerts" type={{alert.type}} close="closeAlert($index)">{{alert.msg}}</alert>
 
     <h3>Contact info</h3>
     <div class="form-group col-sm-6" ng-class="form.FirstName.$invalid && submitted ? 'has-error' : ''">

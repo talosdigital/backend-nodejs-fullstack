@@ -1,0 +1,8 @@
+<h2>{{profile}}</h2>
+<!--<input type="text" ng-model="myModelObj">-->
+<img src="{{profileimg}}" alt=""/>
+<input type="file" ng-file-select="onFileSelect($files)" multiple>
+<div class="drag-place" ng-file-drop="onFileSelect($files)" ng-file-drag-over-class="over"
+     ng-show="dropSupported">drop files here</div>
+<div ng-file-drop-available="dropSupported=true"
+     ng-show="!dropSupported">HTML5 Drop File is not supported!</div>

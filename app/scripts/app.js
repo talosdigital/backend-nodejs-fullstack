@@ -8,7 +8,9 @@ angular.module('nodeserverApp', [
   'ui.bootstrap',
   'ui.router',
   'facebook',
-  'directive.g+signin'
+  'directive.g+signin',
+  'seo',
+  'angularFileUpload'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider , $stateProvider , $urlRouterProvider, FacebookProvider) {
 
@@ -20,10 +22,21 @@ angular.module('nodeserverApp', [
             templateUrl: 'partials/application/main',
             controller: 'MainCtrl'
         })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partials/application/about',
+            controller:'about'
+        })
         .state('account', {
             url: '/user/account',
             templateUrl: 'partials/user/account/main',
             controller: 'UserAccountDashboardCtrl',
+            authenticate: true
+        })
+        .state('account.profile', {
+            url: '/profile',
+            templateUrl: 'partials/user/account/profile',
+            controller: 'UserAccountProfileCtrl',
             authenticate: true
         })
         .state('account.welcome', {

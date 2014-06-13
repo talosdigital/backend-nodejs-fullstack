@@ -34,6 +34,7 @@ angular.module('nodeserverApp')
             });
     });
     $scope.register = function(form) {
+
       $scope.submitted = true;
   
       if(form.$valid) {

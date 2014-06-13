@@ -57,19 +57,24 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-facebook/lib/angular-facebook.js"></script>
     <script src="bower_components/angular-directive.g-signin/google-plus-signin.js"></script>
+    <script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+    <script src="bower_components/ng-file-upload-shim/angular-file-upload-shim.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/controllers/application/angular-seo.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/application/main.js"></script>
         <script src="scripts/controllers/application/navbar.js"></script>
+        <script src="scripts/controllers/application/about.js"></script>
         <script src="scripts/controllers/user/auth/login.js"></script>
         <script src="scripts/controllers/user/auth/signup.js"></script>
         <script src="scripts/controllers/user/auth/settings.js"></script>
         <script src="scripts/controllers/user/account/dashboard.js"></script>
         <script src="scripts/controllers/user/account/social.js"></script>
         <script src="scripts/controllers/user/account/welcome.js"></script>
+        <script src="scripts/controllers/user/account/profile.js"></script>
         <script src="scripts/controllers/user/account/address/new.js"></script>
         <script src="scripts/controllers/user/account/account.js"></script>
         <script src="scripts/controllers/user/account/address/view.js"></script>
@@ -79,6 +84,7 @@
         <script src="scripts/services/session.js"></script>
         <script src="scripts/services/user.js"></script>
         <script src="scripts/services/dashboard.js"></script>
+        <script src="scripts/services/user/address.js"></script>
         <script src="scripts/directives/mongooseError.js"></script>
         <script src="scripts/directives/dashboard.js"></script>
         <script src="scripts/directives/user/auth/social/facebook.js"></script>

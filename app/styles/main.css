@@ -218,4 +218,17 @@ body {
         margin-right: 15px;
     }
 }
+div.drag-place {
+    display: block;
+    padding: 50px;
+    text-align: center;
+    background: #eee;
+    border-radius: 10px;
+    margin: 20px 0px;
+    color: rgba(0,0,0,0.3);
+}
+div.drag-place.over{
+    color: rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 17px -3px #000 inset;
+}
 

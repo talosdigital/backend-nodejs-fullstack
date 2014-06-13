@@ -1,16 +1,23 @@
 'use strict';
 
 angular.module('nodeserverApp')
-  .controller('UserAccountAddressNewCtrl', function ($scope, $location,$routeParams, Auth) {
+  .controller('UserAccountAddressNewCtrl', function ($scope, $location,$routeParams, UserAddressService) {
+        UserAddressService.get($scope.user ,
+            function(res){
+                $scope.user = res;
+            },
+            function(err){
+                console.log(err);
+                $scope.alerts = [
+                    { type: 'danger', msg: 'Something went wrong please try again later' }
+                ];
+            });
         $scope.login = function(form) {
 
             $scope.submitted = true;
 
             if(form.$valid) {
                 console.log($scope.user);
-                $scope.alerts = [
-                    { type: 'success', msg: 'Settings were saved' }
-                ];
             }
             else{
                 var required = '';

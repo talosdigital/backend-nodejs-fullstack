@@ -3,7 +3,6 @@
 angular.module('nodeserverApp')
     .factory('User', function ($resource) {
         return $resource('/api/users/:id', {
-
         }, { //parameters default
             update: {
                 method: 'PUT',
