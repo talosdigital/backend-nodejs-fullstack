@@ -232,3 +232,6 @@ div.drag-place.over{
     box-shadow: 0px 0px 17px -3px #000 inset;
 }
 
+video#video {
+    width: 50%;
+}

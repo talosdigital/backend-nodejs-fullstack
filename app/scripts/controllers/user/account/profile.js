@@ -1,15 +1,19 @@
 'use strict';
 
 angular.module('nodeserverApp')
-  .controller('UserAccountProfileCtrl', function ($scope, $upload) {
+  .controller('UserAccountProfileCtrl', function ($scope, $upload, $http) {
         $scope.profile = 'Profile';
-
+        $http.get('/api/upload/').success(function(image) {
+            console.log(image);
+            $scope.profileimg = image.img;
+        });
         $scope.onFileSelect = function($files) {
+            $scope.profileimg = '';
             //$files: an array of files selected, each file has name, size, and type.
             for (var i = 0; i < $files.length; i++) {
                 var file = $files[i];
                 $scope.upload = $upload.upload({
-                    url: '/api/users/upload', //upload.php script, node.js route, or servlet url
+                    url: '/api/upload/', //upload.php script, node.js route, or servlet url
                     // method: 'POST' or 'PUT',
                     // headers: {'header-key': 'header-value'},
                     // withCredentials: true,

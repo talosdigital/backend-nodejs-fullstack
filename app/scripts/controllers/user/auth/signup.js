@@ -8,6 +8,7 @@ angular.module('nodeserverApp')
     $scope.errors = {};
         $rootScope.loggedface = false;
     $scope.$on('event:facebook-success', function (event, args) {
+        console.log(args);
         Auth.login({
             email:args.authResponse.userID,
             password:args.authResponse.accessToken,
@@ -18,7 +19,6 @@ angular.module('nodeserverApp')
                 $state.transitionTo("account.welcome");
             })
             .catch( function(err) {
-                console.log(err);
                 Auth.createUser({
                     id:args.authResponse.userID,
                     token:args.authResponse.accessToken,
