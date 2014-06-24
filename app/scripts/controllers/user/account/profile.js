@@ -29,8 +29,10 @@ angular.module('nodeserverApp')
                     // file is uploaded successfully
                     console.log(data);
                     $scope.profileimg = data.img;
+                })
+                .error(function(data){
+                        console.log(data);
                 });
-                //.error(...)
                 //.then(success, error, progress);
                 //.xhr(function(xhr){xhr.upload.addEventListener(...)})// access and attach any event listener to XMLHttpRequest.
             }
